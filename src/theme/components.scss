@@ -1,0 +1,71 @@
+@use "./colors";
+
+@mixin text-header {
+  font-family: "Krona One", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 140%;
+  color: colors.$white;
+
+  @media screen and (max-width: 1199px) {
+    font-weight: 700;
+    font-size: 20px;
+  }
+}
+
+@mixin text-description {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: colors.$white;
+  margin-top: 24px;
+
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 8px;
+  }
+}
+
+@mixin container {
+  margin: 0 112px;
+
+  @media screen and (max-width: 1199px) {
+    margin: 0 16px;
+  }
+}
+
+@mixin footer-text {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: colors.$white;
+
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+@mixin links {
+  a:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-color: colors.$blue;
+    content: "";
+    transition: width 0.3s ease-out;
+  }
+
+  a:hover:after {
+    width: 100%;
+  }
+}
